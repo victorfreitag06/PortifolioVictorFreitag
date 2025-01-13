@@ -42,12 +42,15 @@ a{
 }
 
 
-.social{
+.social {
     display: flex;
     gap: 30px;
     list-style: none;
     text-decoration: none;
+    flex-wrap: nowrap; /* Garante que os itens fiquem na mesma linha */
+    align-items: flex-start; /* Alinha os itens na parte superior */
 }
+
 
 .social i{
     font-size: 2rem;

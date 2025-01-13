@@ -133,6 +133,9 @@
     
 
   @media (max-width: 700px) {
+    .social {
+        z-index: 1;
+    }
     .prima-col{
         gap: 20px;
         display: flex;
