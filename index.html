@@ -48,7 +48,9 @@
                 no setor tecnológico e estou sempre disposto a explorar
                 novas oportunidades para meu crescimento profissional. </p>
             <div class="btn">
-                <a href="/doc/Victor-Freitag.pdf" download="Victor-Freitag.pdf">Download CV</a>
+                <div class="btn">
+                    <a id="downloadCV" href="doc/Victor-Freitag.pdf">Download CV</a>
+                </div>
 
             </div>
         </div>
@@ -176,6 +178,19 @@
             </div>
         </div>
     </section>
+    
+    <script>
+        document.getElementById('downloadCV').addEventListener('click', function (event) {
+            event.preventDefault(); // Impede o comportamento padrão
+            const link = document.createElement('a');
+            link.href = this.href;
+            link.download = 'Victor-Freitag.pdf'; // Nome do arquivo para download
+            document.body.appendChild(link);
+            link.click(); // Aciona o download
+            document.body.removeChild(link); // Remove o link após o download
+        });
+    </script>
+
 </body>
 
 </html>
